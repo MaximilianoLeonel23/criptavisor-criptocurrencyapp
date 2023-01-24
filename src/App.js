@@ -2,7 +2,7 @@ import Nav from "./components/nav/nav";
 import { Outlet } from "react-router-dom";
 function App() {
   return (
-    <div>
+    <div className="app_container">
       <Nav />
       <Outlet />
     </div>

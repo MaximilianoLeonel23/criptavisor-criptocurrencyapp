@@ -8,6 +8,7 @@ import Login from "./components/login/login";
 import Criptomonedas from "./components/criptomonedas/Criptomonedas";
 import Home from "./components/home/home";
 import Profile from "./components/profile/profile";
+import CriptoDetails from "./components/criptomonedas/CriptoDetails";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,8 +17,10 @@ root.render(
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
         <Route path="profile" element={<Profile />} />
-
-        <Route path="criptomonedas" element={<Criptomonedas />} />
+      </Route>
+      <Route path="/criptomonedas" element={<App />}>
+        <Route index element={<Criptomonedas />} />
+        <Route path=":id" element={<CriptoDetails />} />
       </Route>
     </Routes>
 

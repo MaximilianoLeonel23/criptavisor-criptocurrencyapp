@@ -4,27 +4,35 @@ const Login = () => {
   return (
     <div className="login_container">
       <div className="login_title">
-        <h1>Cripto Mews</h1>
+        <h1>
+          Inicia <span>sesión</span>
+        </h1>
       </div>
       <div className="form_container">
         <form className="form">
           <div className="input_container">
-            <label htmlFor="email">Correo electrónico</label>
-            <input type="email" name="email" />
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" placeholder="Ingresa tu correo" />
           </div>
           <div className="input_container">
-            <label htmlFor="password">Contraseña</label>
-            <input type="password" name="password" />
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Ingresa tu contraseña"
+            />
           </div>
-          <div className="input_container">
-            <input type="submit" name="submit" value="Inicia sesión" />
+          <div className="form_action-btn">
+            <input
+              type="submit"
+              name="submit"
+              value="Inicia sesión"
+              className=" input_submit"
+            />
+            <Link className="registrate_btn">Registrate</Link>
           </div>
           <div className="form_details">
             <Link to="/">¿No recuerdas tu contraseña?</Link>
-            <Link to="/">
-              ¿Eres nuevo o nueva? Crea tu cuenta gratis y enterate de todas las
-              novedades en criptomonedas
-            </Link>
           </div>
         </form>
       </div>
@@ -32,4 +40,4 @@ const Login = () => {
   );
 };
 
-export default Login
+export default Login;

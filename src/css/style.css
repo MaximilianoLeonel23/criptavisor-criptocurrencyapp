@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #1d1d1d; }
 
 h1,
 h2,
@@ -9,18 +10,423 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif; }
+  font-family: 'Karla', sans-serif; }
 
 p,
 link,
 a,
 button,
 span,
-label {
-  font-family: "Lora", serif; }
-
-a, link {
-  text-decoration: none; }
+label, th, td, th {
+  font-family: 'Karla', sans-serif; }
 
 li {
   list-style: none; }
+
+.login_btn {
+  background-color: #f2921d;
+  border: 1px solid #f2921d;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  color: #262626;
+  font-size: 1rem;
+  border-radius: 0.25rem; }
+  .login_btn:hover {
+    cursor: pointer; }
+  .login_btn a {
+    text-decoration: none;
+    color: #262626;
+    font-weight: 500; }
+
+.details_btn {
+  background-color: transparent;
+  border-radius: 0.25rem;
+  border: 1px solid #e4e4e4;
+  font-size: 1rem;
+  color: #e4e4e4;
+  padding: 0.5rem 1.5rem; }
+  .details_btn:hover {
+    cursor: pointer;
+    background-color: #e4e4e4;
+    color: #1d1d1d; }
+
+.back_btn {
+  color: #fafafa; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+  height: 4rem;
+  border-bottom: 2px solid #414141; }
+  .nav_menu {
+    width: 40%;
+    display: flex;
+    align-items: center; }
+  .nav_list {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%; }
+  .nav_item {
+    margin-left: 1.5rem; }
+    .nav_item a {
+      text-decoration: none;
+      color: #e4e4e4;
+      font-weight: 500;
+      font-size: 1rem; }
+  .nav .nav_btn {
+    margin-left: 1.5rem; }
+  .nav_welcome {
+    display: flex;
+    align-items: center; }
+    .nav_welcome a {
+      text-decoration: none;
+      color: #e4e4e4;
+      font-weight: 500;
+      font-size: 1rem; }
+    .nav_welcome svg {
+      margin-right: 1rem; }
+
+.home_header {
+  background-image: url("/src/icons/bitcoin.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  position: relative;
+  z-index: -50;
+  padding: 6rem 0; }
+  .home_header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fafafa;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 2rem; }
+  .home_header p {
+    width: 50%;
+    color: #d4d4d4;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    text-align: right; }
+
+.header_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1d1d1d;
+  opacity: 0.85;
+  z-index: -25; }
+
+.section_news {
+  display: flex;
+  align-items: center;
+  padding: 8rem 2rem 0; }
+
+.section_top3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.1), transparent 50%, rgba(255, 255, 255, 0.025) 100%);
+  height: 35rem;
+  width: 30%; }
+  .section_top3 span {
+    width: 90%;
+    height: 5rem;
+    background-color: #f5ad56;
+    border-radius: 0.25rem;
+    margin-top: 2rem;
+    text-align: center; }
+
+.top3_container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 1rem; }
+  .top3_container h3 {
+    margin-left: 1rem;
+    color: #e4e4e4;
+    font-size: 1.5rem;
+    font-weight: 700; }
+
+.news_container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  width: 70%;
+  height: 35rem;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.1), transparent 50%, rgba(255, 255, 255, 0.025) 100%); }
+
+.news_title {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem; }
+  .news_title h3 {
+    margin-left: 1rem;
+    color: #e4e4e4;
+    font-size: 1.5rem;
+    font-weight: 700; }
+
+.news_grid {
+  display: flex;
+  overflow: hidden;
+  margin-top: 2rem; }
+
+.new {
+  display: flex;
+  flex-direction: column;
+  min-width: 20rem;
+  height: 25rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  color: #e4e4e4;
+  background-color: #414141;
+  margin-left: 1rem; }
+
+.cripto_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background-color: #414141;
+  position: relative;
+  border-radius: 0.25rem;
+  padding: 0 1rem 10rem; }
+  .cripto_card-symbol {
+    line-height: 0.75;
+    color: #e4e4e4;
+    font-weight: 300;
+    font-size: 1.25rem; }
+  .cripto_card-price {
+    line-height: 0.75;
+    color: #e4e4e4;
+    font-weight: 300;
+    font-size: 1rem; }
+  .cripto_card-rank {
+    position: absolute;
+    right: 0.5rem;
+    top: 0;
+    font-size: 7rem;
+    opacity: 0.25;
+    line-height: 1;
+    color: #e4e4e4;
+    font-weight: 700; }
+  .cripto_card button {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem; }
+  .cripto_card-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #e4e4e4; }
+
+.criptomonedas_page {
+  display: flex;
+  flex-direction: column;
+  background-color: #1d1d1d;
+  border: 2px solid #414141;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin: 2rem 2rem 2rem; }
+
+.criptomonedas_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 3rem;
+  padding: 4rem 2rem; }
+
+.criptomonedas_list {
+  color: #e4e4e4;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-left: 2rem;
+  margin-top: 4rem;
+  line-height: 1.3; }
+
+.criptomonedas_details {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1d1d1d;
+  border: 2px solid #414141;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin: 2rem 2rem 2rem;
+  position: relative; }
+
+.info_container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem 1rem 10rem;
+  margin: 4rem 0 0 2rem;
+  background-color: #f5ad56;
+  height: 20rem;
+  width: 25rem;
+  position: relative;
+  border-radius: 0.25rem; }
+
+.info_symbol {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #1d1d1d; }
+
+.info_name {
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #1d1d1d; }
+
+.info_rank {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  font-size: 12rem;
+  opacity: 0.25;
+  line-height: 1;
+  color: #0a0a0a; }
+
+.info_info {
+  line-height: 1;
+  font-weight: 400;
+  color: #414141;
+  font-size: 1rem;
+  margin-top: auto; }
+  .info_info span {
+    font-weight: 500;
+    color: #1d1d1d;
+    font-size: 1rem; }
+
+.table {
+  padding: 2rem;
+  margin: 4rem 2rem 4rem 8rem;
+  table-layout: fixed;
+  width: 70%;
+  border-collapse: collapse; }
+  .table th {
+    padding: 1rem 2rem;
+    color: #e4e4e4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-radius: 0.25rem; }
+  .table td {
+    padding: 1rem 2rem;
+    color: #e4e4e4;
+    border-radius: 0.25rem;
+    font-weight: 400; }
+
+thead th:nth-child(1) {
+  width: 50%; }
+
+thead th:nth-child(2) {
+  width: 20%; }
+
+tbody tr:nth-child(odd) {
+  background: #0a0a0a; }
+
+tbody tr:nth-child(even) {
+  background: #1d1d1d; }
+
+.cripto_name {
+  color: #f2921d; }
+
+.login_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; }
+
+.login_title {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0 1rem; }
+  .login_title h1 {
+    font-weight: 400;
+    color: #e4e4e4;
+    font-size: 2rem; }
+    .login_title h1 span {
+      color: #f2921d; }
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  background-color: #1d1d1d;
+  width: 30%;
+  padding: 4rem 1rem;
+  border-radius: 0.25rem;
+  border: 2px solid #414141; }
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 400; }
+  .input_container label {
+    color: #5c5c5c; }
+  .input_container input {
+    width: auto;
+    padding: 1rem 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #262626;
+    color: #e4e4e4;
+    border: 0;
+    border-left: 0.5rem solid #f2921d; }
+
+.form_action-btn {
+  display: flex;
+  align-items: center; }
+
+.input_submit {
+  display: flex;
+  font-size: 1rem;
+  color: #1d1d1d;
+  font-weight: 500;
+  width: auto;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #f2921d;
+  border: 0; }
+  .input_submit:hover {
+    cursor: pointer;
+    background-color: #f5ad56;
+    transition: 100ms; }
+
+.registrate_btn {
+  margin-left: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: #777777;
+  border: 2px solid #5c5c5c; }
+  .registrate_btn:hover {
+    cursor: pointer;
+    color: #1d1d1d;
+    background-color: #e4e4e4;
+    border: 2px solid #e4e4e4;
+    transition: 100ms; }
+
+.form_details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem; }
+  .form_details a {
+    line-height: 1.5;
+    text-decoration: none;
+    color: #777777;
+    font-size: 0.85rem; }
+    .form_details a:hover {
+      color: #e4e4e4; }

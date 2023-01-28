@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: $color-dark600;
 }
 
 h1,
@@ -10,7 +11,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 p,
@@ -18,14 +19,10 @@ link,
 a,
 button,
 span,
-label {
-  font-family: "Lora", serif;
-}
-
-a, link {
-    text-decoration: none;
+label, th, td, th {
+  font-family: 'Karla', sans-serif;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }

@@ -1,0 +1,46 @@
+.cripto_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background-color: $color-dark400;
+  position: relative;
+  border-radius: $border-radius;
+  padding: 0 1rem 10rem;
+
+
+  &-symbol {
+    line-height: 0.75;
+    color: $color-dark50;
+    font-weight: 300;
+    font-size: $font-size-h4;
+  }
+
+  &-price {
+    line-height: 0.75;
+    color: $color-dark50;
+    font-weight: 300;
+    font-size: $font-size-p;
+  }
+  &-rank {
+    position: absolute;
+    right: 0.5rem;
+    top: 0;
+    font-size: 7rem;
+    opacity: 0.25;
+    line-height: 1;
+    color: $color-dark50;
+    font-weight: 700;
+  }
+
+  button {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  &-title {
+    font-size: $font-size-h4 * 1.5;
+    font-weight: 700;
+    color: $color-dark50;
+  }
+}

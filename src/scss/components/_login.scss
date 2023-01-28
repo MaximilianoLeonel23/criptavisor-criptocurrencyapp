@@ -1,0 +1,113 @@
+.login {
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &_title {
+    display: flex;
+    align-items: center;
+    margin: 4rem 0 1rem;
+
+    h1 {
+      font-weight: 400;
+      color: $color-dark50;
+      font-size: $font-size-h1;
+      span {
+        color: $color-yellow500;
+      }
+    }
+  }
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $color-dark600;
+  width: 30%;
+  padding: 4rem 1rem;
+  border-radius: $border-radius;
+  border: 2px solid $color-dark400;
+}
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  font-size: $font-size-p;
+  font-weight: 400;
+  label {
+    color: $color-dark300;
+  }
+  input {
+    width: auto;
+    padding: 1rem 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: $border-radius;
+    background-color: $color-dark500;
+    color: $color-dark50;
+    border: 0;
+    border-left: 0.5rem solid $color-yellow500;
+  }
+}
+
+.form_action-btn {
+  display: flex;
+  align-items: center;
+}
+.input_submit {
+  display: flex;
+  font-size: $font-size-p;
+  color: $color-dark600;
+
+  font-weight: 500;
+
+  width: auto;
+  padding: 0.75rem 1rem;
+  border-radius: $border-radius;
+  background-color: $color-yellow500;
+  border: 0;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-yellow400;
+    transition: 100ms;
+  }
+}
+
+.registrate_btn {
+  margin-left: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: $border-radius;
+  font-weight: 400;
+  text-decoration: none;
+  color: $color-dark200;
+  border: 2px solid $color-dark300;
+  &:hover {
+    cursor: pointer;
+    color: $color-dark600;
+    background-color: $color-dark50;
+  border: 2px solid $color-dark50;
+
+    
+    transition: 100ms;
+  }
+}
+
+.form_details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  a {
+    line-height: 1.5;
+    text-decoration: none;
+    color: $color-dark200;
+    font-size: $font-size-p * 0.85;
+    &:hover {
+      color: $color-dark50;
+    }
+  }
+}

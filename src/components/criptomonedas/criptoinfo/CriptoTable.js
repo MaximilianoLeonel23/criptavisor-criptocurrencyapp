@@ -5,18 +5,22 @@ const CriptoTable = ({ history }) => {
   console.log(shortHistory);
   return (
     <table className="table">
-      <tr>
-        <th>Date</th>
-        <th>Price</th>
-      </tr>
-      {shortHistory.map((el) => {
-        return (
-          <tr>
-            <td>{new Date(el.date).toDateString()}</td>
-            <td>{parseFloat(el.priceUsd).toFixed(2)} Usd</td>
-          </tr>
-        );
-      })}
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {shortHistory.map((el) => {
+          return (
+            <tr>
+              <td>{new Date(el.date).toDateString()}</td>
+              <td>{parseFloat(el.priceUsd).toFixed(2)} Usd</td>
+            </tr>
+          );
+        })}
+      </tbody>
     </table>
   );
 };

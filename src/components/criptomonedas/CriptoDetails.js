@@ -38,10 +38,17 @@ const CriptoDetails = () => {
   // Al momento de mostrarlo en la tabla history.length
 
   return (
-    <div className="cripto_container">
-      <CriptoInfo cripto={cripto} />
-      <CriptoTable history={history} />
-    </div>
+    <>
+      <h1 className="criptomonedas_list">
+        Criptomoneda <br />
+        <b className="cripto_name">{cripto.name}</b>
+      </h1>
+
+      <div className="criptomonedas_details">
+        <CriptoInfo cripto={cripto} />
+        <CriptoTable history={history} />
+      </div>
+    </>
   );
 };
 

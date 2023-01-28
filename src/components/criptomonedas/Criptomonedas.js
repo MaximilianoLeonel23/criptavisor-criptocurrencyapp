@@ -21,20 +21,22 @@ const Criptomonedas = () => {
 
   return (
     <>
-      <h1>Lista de criptomonedas</h1>
-      <div className="criptomonedas_container">
-        {cripto.map(({ name, id, priceUsd, symbol, rank }) => {
-          return (
-            <CriptoUnit
-              key={id}
-              name={name}
-              price={priceUsd}
-              symbol={symbol}
-              rank={rank}
-              id={id}
-            />
-          );
-        })}
+      <h1 className="criptomonedas_list"> Lista de <br/><b className="cripto_name">criptomonedas</b></h1>
+      <div className="criptomonedas_page">
+        <div className="criptomonedas_container">
+          {cripto.map(({ name, id, priceUsd, symbol, rank }) => {
+            return (
+              <CriptoUnit
+                key={id}
+                name={name}
+                price={priceUsd}
+                symbol={symbol}
+                rank={rank}
+                id={id}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

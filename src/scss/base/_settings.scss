@@ -6,19 +6,24 @@ $color-red300: #f1b7b1;
 $color-yellow500: #f2921d;
 $color-yellow400: #f5ad56;
 $color-yellow300: #f9c98e;
+$color-green700: #125c4f;
+$color-green600: #20a28a;
 $color-green500: #24b99e;
 $color-green400: #47d1b8;
 $color-green300: #85e0d0;
 
 // Darks and grey
 
+$color-dark700: #0a0a0a;
+$color-dark600: #1d1d1d;
 $color-dark500: #262626;
-$color-dark400: #5c5c5c;
-$color-dark300: #939393;
-$color-dark200: #c9c9c9;
-$color-dark100: #dddddd;
+$color-dark400: #414141;
+$color-dark300: #5c5c5c;
+$color-dark200: #777777;
+$color-dark50: #e4e4e4;
 
 $color-white: #fafafa;
+$color-white300: darken(#fafafa, 15);
 
 // Font-variables
 
@@ -31,4 +36,3 @@ $font-size-p: 1rem;
 $border-radius: 0.25rem;
 
 // Prueba del background gradiente
-

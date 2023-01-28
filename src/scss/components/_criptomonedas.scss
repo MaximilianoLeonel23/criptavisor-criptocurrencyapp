@@ -1,0 +1,26 @@
+.criptomonedas_page {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $color-dark600;
+  border: 2px solid $color-dark400;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin: 2rem 2rem 2rem;
+}
+.criptomonedas_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 3rem;
+  padding: 4rem 2rem;
+}
+
+.criptomonedas_list {
+  color: $color-dark50;
+  font-size: $font-size-h1;
+  font-weight: 400;
+  margin-left: 2rem;
+  margin-top: 4rem;
+  line-height: 1.3;
+}

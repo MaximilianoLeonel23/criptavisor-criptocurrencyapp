@@ -1,0 +1,109 @@
+// Información de las criptomonedas
+
+.criptomonedas_details {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-dark600;
+  border: 2px solid $color-dark400;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin: 2rem 2rem 2rem;
+  position: relative;
+}
+
+.info {
+  &_container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem 1rem 10rem;
+
+    margin: 4rem 0 0 2rem;
+
+    background-color: $color-yellow400;
+    height: 20rem;
+    width: 25rem;
+    position: relative;
+
+    border-radius: $border-radius;
+  }
+  &_symbol {
+    font-weight: 400;
+    font-size: $font-size-p;
+    color: $color-dark600;
+  }
+  &_name {
+    font-weight: 700;
+    font-size: $font-size-h2;
+    line-height: 1;
+    color: $color-dark600;
+  }
+  &_rank {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    font-size: 12rem;
+    opacity: 0.25;
+    line-height: 1;
+    color: $color-dark700;
+  }
+  &_info {
+    line-height: 1;
+    font-weight: 400;
+    color: $color-dark400;
+    font-size: $font-size-p;
+    margin-top: auto;
+
+    span {
+      font-weight: 500;
+      color: $color-dark600;
+      font-size: $font-size-p;
+    }
+  }
+}
+
+.table {
+  padding: 2rem;
+  margin: 4rem 2rem 4rem 8rem;
+  table-layout: fixed;
+  width: 70%;
+  border-collapse: collapse;
+
+  th {
+    padding: 1rem 2rem;
+    color: $color-dark50;
+    text-transform: uppercase;
+
+    font-weight: 700;
+    font-size: $font-size-h4;
+    border-radius: $border-radius;
+  }
+
+  td {
+    padding: 1rem 2rem;
+    color: $color-dark50;
+    border-radius: $border-radius;
+
+    font-weight: 400;
+  }
+}
+
+thead th:nth-child(1) {
+  width: 50%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+tbody tr:nth-child(odd) {
+  background: $color-dark700;
+}
+
+tbody tr:nth-child(even) {
+  background: $color-dark600;
+}
+
+.cripto_name {
+  color: $color-yellow500;
+}

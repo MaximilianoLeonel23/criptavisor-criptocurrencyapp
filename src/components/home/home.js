@@ -1,4 +1,6 @@
+import New from "./news";
 const Home = () => {
+
   return (
     <>
       <header className="home_header">
@@ -55,18 +57,33 @@ const Home = () => {
             <h3>Últimas noticias</h3>
           </div>
           <div className="news_grid">
-            <article className="new">
-              <h4>Titulo de una noticia</h4>
-              <p>Descripcion de la noticio sobre criptomonedas</p>
+            {/* <article className="new">
+              <img src="https://picsum.photos/300/300" alt=""></img>
+              <div>
+                <h4>Titulo de una noticia</h4>
+                <p>Descripcion de la noticio sobre criptomonedas</p>
+              </div>
+              <span className="new_date">Agosto, 2022</span>
             </article>
             <article className="new">
-              <h4>Titulo de una noticia</h4>
-              <p>Descripcion de la noticio sobre criptomonedas</p>
+              <img src="https://picsum.photos/300/300" alt=""></img>
+              <div>
+                <h4>Titulo de una noticia</h4>
+                <p>Descripcion de la noticio sobre criptomonedas</p>
+              </div>
+              <span className="new_date">Agosto, 2022</span>
             </article>
+
             <article className="new">
-              <h4>Titulo de una noticia</h4>
-              <p>Descripcion de la noticio sobre criptomonedas</p>
-            </article>
+              <img src="https://picsum.photos/300/300" alt=""></img>
+
+              <div>
+                <h4>Titulo de una noticia</h4>
+                <p>Descripcion de la noticio sobre criptomonedas</p>
+              </div>
+              <span className="new_date">Agosto, 2022</span>
+            </article> */}
+            <New />
           </div>
         </article>
         <div></div>

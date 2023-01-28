@@ -131,10 +131,45 @@
   display: flex;
   flex-direction: column;
   min-width: 20rem;
-  height: 25rem;
+  height: 27rem;
   border-radius: $border-radius;
-  padding: 1rem;
+
   color: $color-dark50;
   background-color: $color-dark400;
   margin-left: 1rem;
+  position: relative;
+
+  img {
+    border-radius: $border-radius;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+
+  h4 {
+    padding: 0 1rem;
+    font-size: $font-size-h4;
+    font-weight: 500;
+    color: $color-dark50;
+  }
+
+  p {
+    padding: 0 1rem;
+    font-size: $font-size-p;
+    color: $color-dark50;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  span {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+    color: $color-dark200;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }

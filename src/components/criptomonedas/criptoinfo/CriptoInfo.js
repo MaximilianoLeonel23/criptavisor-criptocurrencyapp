@@ -12,7 +12,7 @@ const CriptoInfo = ({ cripto }) => {
           <span>Suministro:</span> {parseFloat(cripto.supply).toFixed(2)}
         </p>
         <p>
-          <span>Suministro máximo:</span>{" "}
+          <span>Suministro máximo:</span> {""}
           {parseFloat(cripto.maxSupply ? cripto.maxSupply : "-").toFixed(2)}
         </p>
         <p>

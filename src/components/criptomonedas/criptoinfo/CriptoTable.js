@@ -7,14 +7,14 @@ const CriptoTable = ({ history }) => {
     <table className="table">
       <thead>
         <tr>
-          <th scope="col">Date</th>
-          <th scope="col">Price</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Precio</th>
         </tr>
       </thead>
       <tbody>
-        {shortHistory.map((el) => {
+        {shortHistory.map((el, i) => {
           return (
-            <tr>
+            <tr key={i}>
               <td>{new Date(el.date).toDateString()}</td>
               <td>{parseFloat(el.priceUsd).toFixed(2)} Usd</td>
             </tr>

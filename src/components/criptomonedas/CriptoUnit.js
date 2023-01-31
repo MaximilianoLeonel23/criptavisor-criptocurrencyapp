@@ -9,7 +9,7 @@ const CriptoUnit = ({ id, name, price, symbol, rank }) => {
       </div>
       <p className="cripto_card-price">
         {" "}
-        <b>Price:</b> {parseFloat(price).toFixed(2)} USD
+        <b>Precio:</b> {parseFloat(price).toFixed(2)} USD
       </p>
       <span className="cripto_card-rank">{rank}</span>
       <Link to={`/criptomonedas/${id}`}>

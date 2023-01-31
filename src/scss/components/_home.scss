@@ -68,17 +68,28 @@
     rgba(255, 255, 255, 0.025) 100%
   );
 
-  height: 35rem;
+  height: 40rem;
+
   width: 30%;
 
-  span {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-h4;
+    font-weight: 600;
+    color: $color-dark600;
     width: 90%;
-    height: 5rem;
-
-    background-color: $color-yellow400;
+    height: 4rem;
+    text-decoration: none;
+    background-color: $color-yellow500;
     border-radius: $border-radius;
     margin-top: 2rem;
     text-align: center;
+    &:hover {
+      background-color: $color-yellow400;
+      transition: 200ms;
+    }
   }
 }
 
@@ -100,7 +111,7 @@
   flex-direction: column;
   margin-left: 2rem;
   width: 70%;
-  height: 35rem;
+  height: 40rem;
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.1),
@@ -123,8 +134,10 @@
 
 .news_grid {
   display: flex;
+
   overflow: hidden;
   margin-top: 2rem;
+  position: relative;
 }
 
 .new {
@@ -138,12 +151,14 @@
   background-color: $color-dark400;
   margin-left: 1rem;
   position: relative;
-
   img {
     border-radius: $border-radius;
     width: 100%;
-    height: 50%;
+    height: 100%;
     object-fit: cover;
+  }
+  &_image {
+    height: 12rem;
   }
 
   h4 {
@@ -172,4 +187,20 @@
   a {
     text-decoration: none;
   }
+}
+
+.news_grid-btn-right {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.news_grid-btn-left {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
 }

@@ -1,6 +1,9 @@
 import New from "./news";
+import Criptomonedas from "../../functions/functions";
+import { Link } from "react-router-dom";
 const Home = () => {
-
+  const top = Criptomonedas().slice([0], [5]);
+  console.log(top);
   return (
     <>
       <header className="home_header">
@@ -34,11 +37,17 @@ const Home = () => {
                 fill="#F2921D"
               />
             </svg>
-            <h3>Top 3</h3>
+            <h3>Top 5</h3>
           </div>
-          <span>First</span>
-          <span>Second</span>
-          <span>Third</span>
+          {top.map((e, i) => {
+            return (
+              <Link to={`/criptomonedas/${e.id}`}>
+                <span key={i}>
+                  {e.rank} - {e.id.toUpperCase()}
+                </span>
+              </Link>
+            );
+          })}
         </article>
         <article className="news_container">
           <div className="news_title">
@@ -57,32 +66,6 @@ const Home = () => {
             <h3>Últimas noticias</h3>
           </div>
           <div className="news_grid">
-            {/* <article className="new">
-              <img src="https://picsum.photos/300/300" alt=""></img>
-              <div>
-                <h4>Titulo de una noticia</h4>
-                <p>Descripcion de la noticio sobre criptomonedas</p>
-              </div>
-              <span className="new_date">Agosto, 2022</span>
-            </article>
-            <article className="new">
-              <img src="https://picsum.photos/300/300" alt=""></img>
-              <div>
-                <h4>Titulo de una noticia</h4>
-                <p>Descripcion de la noticio sobre criptomonedas</p>
-              </div>
-              <span className="new_date">Agosto, 2022</span>
-            </article>
-
-            <article className="new">
-              <img src="https://picsum.photos/300/300" alt=""></img>
-
-              <div>
-                <h4>Titulo de una noticia</h4>
-                <p>Descripcion de la noticio sobre criptomonedas</p>
-              </div>
-              <span className="new_date">Agosto, 2022</span>
-            </article> */}
             <New />
           </div>
         </article>

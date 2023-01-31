@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
 import CriptoUnit from "./CriptoUnit";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const Criptomonedas = () => {
   const [cripto, setCripto] = useState([]);
@@ -10,7 +10,6 @@ const Criptomonedas = () => {
         .get("https://api.coincap.io/v2/assets")
         .then((data) => {
           setCripto(data.data.data);
-          console.log(cripto);
         })
         .catch((e) => {
           console.log("Se ha producido un error");
@@ -21,7 +20,11 @@ const Criptomonedas = () => {
 
   return (
     <>
-      <h1 className="criptomonedas_list"> Lista de <br/><b className="cripto_name">criptomonedas</b></h1>
+      <h1 className="criptomonedas_list">
+        {" "}
+        Lista de <br />
+        <b className="cripto_name">criptomonedas</b>
+      </h1>
       <div className="criptomonedas_page">
         <div className="criptomonedas_container">
           {cripto.map(({ name, id, priceUsd, symbol, rank }) => {

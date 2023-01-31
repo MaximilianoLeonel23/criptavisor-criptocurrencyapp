@@ -4,6 +4,8 @@ import { useState } from "react";
 const Nav = () => {
   const [login, setLogin] = useState(false);
 
+
+ 
   return (
     <nav className="nav">
       <div className="nav_welcome">
@@ -36,7 +38,17 @@ const Nav = () => {
 
           {login ? (
             <li className="nav_item">
-              <NavLink to="/profile">Perfil</NavLink>
+              <a
+                href="/"
+                onClick={() => {
+                  if (localStorage.getItem("tokenUser")) {
+                    localStorage.removeItem("tokenUser");
+                    setLogin(false)
+                  }
+                }}
+              >
+                Cerrar sesión
+              </a>
             </li>
           ) : (
             <button

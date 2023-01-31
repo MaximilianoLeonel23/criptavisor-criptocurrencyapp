@@ -14,7 +14,7 @@ import Registration from "./components/registration/registration";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
- 
+  
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
@@ -32,7 +32,7 @@ root.render(
         <Route path="/registration" element={<Registration />} />
       </Routes>
     </Router>
- 
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,10 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
-
+import { useState, useContext } from "react";
+import { userContext } from "../../App";
 const Nav = () => {
   const [login, setLogin] = useState(false);
 
-
+  const user = useContext(userContext)
  
   return (
     <nav className="nav">
@@ -23,7 +23,9 @@ const Nav = () => {
         </svg>
 
         {/* Configurar el nombre del usuario */}
-        <Link to="/"> Bienvenido, Max </Link>
+
+        <Link to="/"> {user.gender === "male" ? "Bienvenido" : "Bienvenida"}, {user.firstName} </Link>
+        {console.log(user)}
       </div>
       <div className="nav_menu">
         <ul className="nav_list">

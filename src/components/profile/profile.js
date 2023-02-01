@@ -3,7 +3,7 @@ import { userContext } from "../../App";
 
 const Profile = () => {
   const user = useContext(userContext);
-
+  console.log(user);
   return (
     <>
       <h1 className="profile_title">

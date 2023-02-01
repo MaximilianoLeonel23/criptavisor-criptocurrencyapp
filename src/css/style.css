@@ -445,7 +445,7 @@ tbody tr:nth-child(even) {
   font-size: 1rem;
   color: #1d1d1d;
   font-weight: 500;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   background-color: #f2921d;
   border: 2px solid #f2921d; }
@@ -457,7 +457,7 @@ tbody tr:nth-child(even) {
 
 .registrate_btn {
   margin-left: 1rem;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   font-weight: 500;
   text-decoration: none;

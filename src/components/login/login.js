@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import React from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -10,7 +10,6 @@ const Login = () => {
     password: "",
   });
 
-  
   /* Testing data 
   username: kminchelle
   password: 0lelplR
@@ -39,9 +38,8 @@ const Login = () => {
       .catch((error) => console.log(error));
   };
   if (localStorage.getItem("tokenUser")) {
-    return <Navigate to="/" /> 
+    return <Navigate to="/" />;
   }
-  
 
   return (
     <div className="login_container">

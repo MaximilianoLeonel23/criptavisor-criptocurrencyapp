@@ -8,7 +8,7 @@ function App() {
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    fetch("https://dummyjson.com/users/15")
+    fetch("https://dummyjson.com/users/19")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);

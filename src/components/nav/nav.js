@@ -4,8 +4,8 @@ import { userContext } from "../../App";
 const Nav = () => {
   const [login, setLogin] = useState(false);
 
-  const user = useContext(userContext)
- 
+  const user = useContext(userContext);
+
   return (
     <nav className="nav">
       <div className="nav_welcome">
@@ -24,7 +24,11 @@ const Nav = () => {
 
         {/* Configurar el nombre del usuario */}
 
-        <Link to="/"> {user.gender === "male" ? "Bienvenido" : "Bienvenida"}, {user.firstName} </Link>
+        <Link to="/">
+          {" "}
+          {user.gender === "male" ? "Bienvenido" : "Bienvenida"},{" "}
+          {user.firstName}{" "}
+        </Link>
         {console.log(user)}
       </div>
       <div className="nav_menu">
@@ -37,7 +41,13 @@ const Nav = () => {
           </li>
 
           {/* Decidir si mostrar un boton de login o perfil según estado */}
-
+          <li className="nav_item">
+            <NavLink
+              to={localStorage.getItem("tokenUser") ? "/profile" : "/login"}
+            >
+              Perfil
+            </NavLink>
+          </li>
           {login ? (
             <li className="nav_item">
               <a
@@ -45,7 +55,7 @@ const Nav = () => {
                 onClick={() => {
                   if (localStorage.getItem("tokenUser")) {
                     localStorage.removeItem("tokenUser");
-                    setLogin(false)
+                    setLogin(false);
                   }
                 }}
               >

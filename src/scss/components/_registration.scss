@@ -6,9 +6,55 @@
     width: 100%;
   }
 
+  &_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+    display: none;
+  }
+
+  &_modal {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    display: none;
+  }
+  &_pop-up {
+    padding: 1rem 2rem;
+    background-color: $color-white;
+    border-radius: $border-radius;
+    h4 {
+      font-weight: 600;
+      font-size: $font-size-h4;
+    }
+    svg {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &_success {
+    color: $color-yellow500;
+    border: 1px solid $color-yellow500;
+    padding: 0.25rem 0.5rem;
+    width: fit-content;
+    margin: auto;
+    border-radius: $border-radius;
+  }
+
   &_title {
     display: flex;
     align-items: center;
+
     margin: 4rem 0 1rem;
 
     h1 {
@@ -17,6 +63,15 @@
       font-size: $font-size-h1;
       span {
         color: $color-yellow500;
+      }
+    }
+    svg {
+      fill: white;
+      padding-right: 0.5rem;
+      &:hover {
+        fill: $color-yellow500;
+
+        transition: 200ms;
       }
     }
   }
@@ -38,6 +93,6 @@
 }
 
 .form_action-btn-registration {
-    display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
 }

@@ -134,10 +134,21 @@
 
 .news_grid {
   display: flex;
-
-  overflow: hidden;
+  overflow: auto;
   margin-top: 2rem;
+  padding-right: 1rem;
   position: relative;
+}
+
+.news_grid::-webkit-scrollbar {
+  width: 0.25rem;
+  margin: 1rem;
+}
+
+.news_grid::-webkit-scrollbar-thumb {
+  background-color: $color-yellow500;
+  border-radius: 1rem;
+  padding: 0.25rem;
 }
 
 .new {
@@ -146,7 +157,7 @@
   min-width: 20rem;
   height: 27rem;
   border-radius: $border-radius;
-
+  margin-bottom: 0.5rem;
   color: $color-dark50;
   background-color: $color-dark400;
   margin-left: 1rem;

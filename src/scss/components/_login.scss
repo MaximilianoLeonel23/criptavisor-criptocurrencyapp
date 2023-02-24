@@ -19,6 +19,14 @@
         color: $color-yellow500;
       }
     }
+    svg {
+      fill: white;
+      padding-right: 0.5rem;
+      &:hover {
+        fill: $color-yellow500;
+        transition: 200ms;
+      }
+    }
   }
 }
 

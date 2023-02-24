@@ -32,7 +32,9 @@ li {
   font-size: 1rem;
   border-radius: 0.25rem; }
   .login_btn:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: #f5ad56;
+    transition: 100ms; }
   .login_btn a {
     text-decoration: none;
     color: #262626;
@@ -190,9 +192,19 @@ li {
 
 .news_grid {
   display: flex;
-  overflow: hidden;
+  overflow: auto;
   margin-top: 2rem;
+  padding-right: 1rem;
   position: relative; }
+
+.news_grid::-webkit-scrollbar {
+  width: 0.25rem;
+  margin: 1rem; }
+
+.news_grid::-webkit-scrollbar-thumb {
+  background-color: #f2921d;
+  border-radius: 1rem;
+  padding: 0.25rem; }
 
 .new {
   display: flex;
@@ -200,6 +212,7 @@ li {
   min-width: 20rem;
   height: 27rem;
   border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
   color: #e4e4e4;
   background-color: #414141;
   margin-left: 1rem;
@@ -369,19 +382,21 @@ li {
     color: #e4e4e4;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.25rem;
-    border-radius: 0.25rem; }
+    font-size: 1.25rem; }
   .table td {
     padding: 1rem 2rem;
     color: #e4e4e4;
-    border-radius: 0.25rem;
     font-weight: 400; }
 
 thead th:nth-child(1) {
-  width: 50%; }
+  width: 50%;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem; }
 
 thead th:nth-child(2) {
-  width: 20%; }
+  width: 20%;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem; }
 
 tbody tr:nth-child(odd) {
   background: #0a0a0a; }
@@ -408,6 +423,12 @@ tbody tr:nth-child(even) {
     font-size: 2rem; }
     .login_title h1 span {
       color: #f2921d; }
+  .login_title svg {
+    fill: white;
+    padding-right: 0.5rem; }
+    .login_title svg:hover {
+      fill: #f2921d;
+      transition: 200ms; }
 
 .form_container {
   display: flex;
@@ -488,6 +509,46 @@ tbody tr:nth-child(even) {
   align-items: center;
   width: 100%; }
 
+.registration_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+  display: none; }
+
+.registration_modal {
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  display: none; }
+
+.registration_pop-up {
+  padding: 1rem 2rem;
+  background-color: #fafafa;
+  border-radius: 0.25rem; }
+  .registration_pop-up h4 {
+    font-weight: 600;
+    font-size: 1.25rem; }
+  .registration_pop-up svg {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    width: 1.5rem;
+    height: 1.5rem; }
+    .registration_pop-up svg:hover {
+      cursor: pointer; }
+
+.registration_success {
+  color: #f2921d;
+  border: 1px solid #f2921d;
+  padding: 0.25rem 0.5rem;
+  width: fit-content;
+  margin: auto;
+  border-radius: 0.25rem; }
+
 .registration_title {
   display: flex;
   align-items: center;
@@ -498,6 +559,12 @@ tbody tr:nth-child(even) {
     font-size: 2rem; }
     .registration_title h1 span {
       color: #f2921d; }
+  .registration_title svg {
+    fill: white;
+    padding-right: 0.5rem; }
+    .registration_title svg:hover {
+      fill: #f2921d;
+      transition: 200ms; }
 
 .form_container-registration {
   display: flex;
@@ -526,7 +593,6 @@ tbody tr:nth-child(even) {
 
 .profile_page {
   display: flex;
-  flex-direction: column;
   background-color: #1d1d1d;
   border: 2px solid #414141;
   border-top-left-radius: 0.5rem;
@@ -534,7 +600,7 @@ tbody tr:nth-child(even) {
   margin: 2rem 2rem 2rem; }
 
 .profile_container {
-  max-width: 25%;
+  width: 25%;
   border-right: 2px solid #414141;
   text-align: left;
   padding: 4rem 1rem;
@@ -563,3 +629,17 @@ tbody tr:nth-child(even) {
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.3; }
+
+.profile_criptomonedas {
+  width: 75%;
+  text-align: left;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .profile_criptomonedas h3 {
+    font-weight: 500;
+    color: #f5ad56;
+    border: 1px solid #f5ad56;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem; }

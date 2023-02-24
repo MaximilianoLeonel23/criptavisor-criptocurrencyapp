@@ -13,6 +13,7 @@ const CriptoTable = ({ history }) => {
       </thead>
       <tbody>
         {shortHistory.map((el, i) => {
+          console.log(el.date);
           return (
             <tr key={i}>
               <td>{new Date(el.date).toDateString()}</td>

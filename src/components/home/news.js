@@ -36,7 +36,8 @@ const New = () => {
                 <h4>{el.title}</h4>
                 <p>{truncate(el.description, 45)}</p>
               </div>
-              <span className="new_date">{el.pubDate}</span>
+              {/* <td>{new Date(el.date).toDateString()}</td> */}
+              <span className="new_date">{new Date(el.pubDate).toDateString()}</span>
             </a>
           </article>
         );

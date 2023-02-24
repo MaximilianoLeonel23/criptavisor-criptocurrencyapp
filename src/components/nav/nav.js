@@ -22,15 +22,15 @@ const Nav = () => {
         </svg>
 
         {/* Configurar el nombre del usuario */}
-        {localStorage.getItem("tokenUser") ? (
+        {localStorage?.getItem("tokenUser") ? (
           <Link to="/">
             {"Bienvenid" +
-              (userAuth.gender === "male" ? "o" : "a") +
+              (userAuth?.gender === "male" ? "o" : "a") +
               ", " +
-              userAuth.firstName}
+              userAuth?.firstName}
           </Link>
         ) : (
-          <Link to="/">Bienvenido</Link>
+          <Link to="/">Criptavisor</Link>
         )}
 
         {/* { localStorage.getItem("tokenUser") ? 
@@ -62,6 +62,7 @@ const Nav = () => {
                 onClick={() => {
                   if (localStorage.getItem("tokenUser")) {
                     localStorage.removeItem("tokenUser");
+                    localStorage.removeItem("dataUser");
                     setToken(false);
                   }
                 }}

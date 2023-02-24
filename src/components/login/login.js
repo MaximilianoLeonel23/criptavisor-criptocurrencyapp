@@ -30,13 +30,13 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         if (data) {
           setUserAuth(data);
           localStorage.setItem("tokenUser", data.token);
+          localStorage.setItem("dataUser", JSON.stringify(data));
           navigation("/");
         }
-      
       })
 
       .catch((error) => console.log(error));
@@ -49,6 +49,16 @@ const Login = () => {
   return (
     <div className="login_container">
       <div className="login_title">
+        <Link to="/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="-5 -5 24 24"
+            width="36"
+            fill="currentColor"
+          >
+            <path d="M3.414 7.657l3.95 3.95A1 1 0 0 1 5.95 13.02L.293 7.364a.997.997 0 0 1 0-1.414L5.95.293a1 1 0 1 1 1.414 1.414l-3.95 3.95H13a1 1 0 0 1 0 2H3.414z"></path>
+          </svg>
+        </Link>
         <h1>
           Inicia <span>sesión</span>
         </h1>
@@ -88,7 +98,7 @@ const Login = () => {
               type="submit"
               name="submit"
               value="Inicia sesión"
-              className=" input_submit"
+              className="input_submit"
             />
             <Link to="/registration" className="registrate_btn">
               Registrate

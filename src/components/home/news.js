@@ -11,7 +11,7 @@ const New = () => {
 
   useEffect(() => {
     fetch(
-      "https://newsdata.io/api/1/news?apikey=pub_161941e79c8d74ed7845153dcd131450f5315&q=criptomonedas&language=en,es"
+      "https://newsdata.io/api/1/news?apikey=pub_16194d587cdd4937fabcc5ea75b3b32c6029f&q=criptomonedas&language=en,es"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -19,7 +19,7 @@ const New = () => {
       })
       .catch((error) => console.log(error));
   }, []);
-  
+
   return (
     <>
       {news.map((el, i) => {
@@ -37,7 +37,9 @@ const New = () => {
                 <p>{truncate(el.description, 45)}</p>
               </div>
               {/* <td>{new Date(el.date).toDateString()}</td> */}
-              <span className="new_date">{new Date(el.pubDate).toDateString()}</span>
+              <span className="new_date">
+                {new Date(el.pubDate).toDateString()}
+              </span>
             </a>
           </article>
         );

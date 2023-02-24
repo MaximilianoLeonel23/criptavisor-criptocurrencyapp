@@ -1,12 +1,11 @@
 import New from "./news";
 import Criptomonedas from "../../functions/functions";
 import { Link } from "react-router-dom";
-
+import { useAuthContext } from "../../contexts/authContext";
 const Home = () => {
   const top = Criptomonedas().slice([0], [5]);
-  
+  const {user, setUser} = useAuthContext();
 
-  
   
   return (
     <>

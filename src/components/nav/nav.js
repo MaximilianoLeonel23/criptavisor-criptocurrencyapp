@@ -1,10 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState, useContext } from "react";
-import { userContext } from "../../App";
+import { useState } from "react";
+import { useAuthContext } from "../../contexts/authContext";
 const Nav = () => {
-  const [login, setLogin] = useState(false);
-
-  const user = useContext(userContext);
+  const [token, setToken] = useState(false);
+  const { userAuth, setUserAuth } = useAuthContext();
 
   return (
     <nav className="nav">
@@ -23,13 +22,20 @@ const Nav = () => {
         </svg>
 
         {/* Configurar el nombre del usuario */}
+        {localStorage.getItem("tokenUser") ? (
+          <Link to="/">
+            {"Bienvenid" +
+              (userAuth.gender === "male" ? "o" : "a") +
+              ", " +
+              userAuth.firstName}
+          </Link>
+        ) : (
+          <Link to="/">Bienvenido</Link>
+        )}
 
-        <Link to="/">
-          {" "}
-          {user.gender === "male" ? "Bienvenido" : "Bienvenida"},{" "}
-          {user.firstName}{" "}
-        </Link>
-        {console.log(user)}
+        {/* { localStorage.getItem("tokenUser") ? 
+            (user.gender === "male" ? "Bienvenido" : "Bienvenida",{" "}
+            {user.firstName}{" "}) : "Bienvenido" */}
       </div>
       <div className="nav_menu">
         <ul className="nav_list">
@@ -48,14 +54,15 @@ const Nav = () => {
               Perfil
             </NavLink>
           </li>
-          {login ? (
+          {/* Iniciar o cerrar sesión */}
+          {localStorage.getItem("tokenUser") ? (
             <li className="nav_item">
               <a
                 href="/"
                 onClick={() => {
                   if (localStorage.getItem("tokenUser")) {
                     localStorage.removeItem("tokenUser");
-                    setLogin(false);
+                    setToken(false);
                   }
                 }}
               >
@@ -63,15 +70,14 @@ const Nav = () => {
               </a>
             </li>
           ) : (
-            <button
-              className="login_btn
+            <NavLink to="/login">
+              <button
+                className="login_btn
               nav_btn"
-              onClick={(e) => {
-                setLogin(true);
-              }}
-            >
-              <NavLink to="/login">Inicia sesión</NavLink>
-            </button>
+              >
+                Inicia sesión
+              </button>
+            </NavLink>
           )}
         </ul>
       </div>

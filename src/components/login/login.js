@@ -1,22 +1,25 @@
-import { useState } from "react";
-import React from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-
+import { useAuthContext } from "../../contexts/authContext";
+import { useState } from "react";
 const Login = () => {
   const navigation = useNavigate();
+  const { userAuth, setUserAuth } = useAuthContext();
 
+  /* Testing data 
+  ---
+  username: kminchelle
+  password: 0lelplR
+  ---
+  "username": "atuny0",
+  "password": "9uQFF1Lh",
+  ---
+  "username": "jtreleven5",
+  "password": "zY1nE46Zm",
+  */
   const [user, setUser] = useState({
     username: "",
     password: "",
   });
-
-  /* Testing data 
-  username: kminchelle
-  password: 0lelplR
-  */
-
-  /* Los datos devueltos deben pasar a un useContext 
-  como objeto para utilizarlos en el profile, home y otros lugares*/
 
   const submit = function (e) {
     e.preventDefault();
@@ -27,16 +30,18 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setUser(data);
-        console.log(user);
-
-        localStorage.setItem("tokenUser", data.token);
-        navigation("/");
+        console.log(data)
+        if (data) {
+          setUserAuth(data);
+          localStorage.setItem("tokenUser", data.token);
+          navigation("/");
+        }
+      
       })
 
       .catch((error) => console.log(error));
   };
+
   if (localStorage.getItem("tokenUser")) {
     return <Navigate to="/" />;
   }

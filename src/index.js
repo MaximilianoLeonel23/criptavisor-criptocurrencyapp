@@ -10,11 +10,11 @@ import Home from "./components/home/home";
 import Profile from "./components/profile/profile";
 import CriptoDetails from "./components/criptomonedas/CriptoDetails";
 import Registration from "./components/registration/registration";
-
+import AuthContextProvider from "./contexts/authContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  
+  <AuthContextProvider>
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
@@ -32,7 +32,7 @@ root.render(
         <Route path="/registration" element={<Registration />} />
       </Routes>
     </Router>
-  
+  </AuthContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

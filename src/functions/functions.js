@@ -9,7 +9,7 @@ const Criptomonedas = () => {
         .get("https://api.coincap.io/v2/assets")
         .then((data) => {
           setCripto(data.data.data);
-          console.log(cripto);
+          
         })
         .catch((e) => {
           console.log("Se ha producido un error");

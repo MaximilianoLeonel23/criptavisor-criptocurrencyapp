@@ -19,7 +19,7 @@ const New = () => {
       })
       .catch((error) => console.log(error));
   }, []);
-  console.log(news);
+  
   return (
     <>
       {news.map((el, i) => {

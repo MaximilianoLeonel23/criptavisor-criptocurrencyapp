@@ -76,7 +76,7 @@ const Login = () => {
               }}
               type="text"
               name="username"
-              placeholder="Ingresa tu usuario"
+              placeholder="Ingresa tu usuario (kminchelle)"
             />
           </div>
           <div className="input_container">
@@ -90,7 +90,7 @@ const Login = () => {
               }}
               type="password"
               name="password"
-              placeholder="Ingresa tu contraseña"
+              placeholder="Ingresa tu contraseña (0lelplR)"
             />
           </div>
           <div className="form_action-btn">

@@ -30,16 +30,16 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        if (data) {
+        if (data.id) {
           setUserAuth(data);
           localStorage.setItem("tokenUser", data.token);
           localStorage.setItem("dataUser", JSON.stringify(data));
-          navigation("/");
         }
       })
 
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   if (localStorage.getItem("tokenUser")) {

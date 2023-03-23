@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+<h1 class="text-xl text-center text-slate-800">Criptavisor</h1>
+<h2>Aplicación de criptomonedas</h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div>
+<img src="src\icons\criptavisor.png">
+</div>
 
-## Available Scripts
+<h4 class="text-lg">\\ Descripción del proyecto</h4>
+<p>Es una aplicación que permite hacer un seguimiento de las criptomonedas más codiciadas del momento. Con actualizaciones permanentes, rankings y estadísticas podrás comparar y tomar futuras decisiones en el mundo de las criptomonedas. Asímismo, la aplicación ofrece un canal a las últimas noticias sobre el rubro.</p>
+<p>Se sirve de la API de Dummyjson para administrar los usuarios y de ... para mostrar las últimas noticias</p>
 
-In the project directory, you can run:
+<h4 class="text-lg">\\ Funcionalidades</h4>
 
-### `npm start`
+<ul>
+<li>Mostrar el top 100 de criptomonedas actuales junto a sus estadísticas</li>
+<li>Registro y login de usuario</li>
+<li>Canal de noticias</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h4 class="text-lg">\\ Acceso al proyecto</h4>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<a href="https://criptavisor.vercel.app" target="_blank">Acceda mediante este link</a>.
 
-### `npm test`
+<p>Tanto el registro como el login de usuarios sólo simula su función, es decir que no modifica la información original en el servidor.</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p>Como usuarios de prueba pueden utilizarse cualquiera de los disponibles en la documentación de la API. En el código recomiendo los siguientes:</p>
 
-### `npm run build`
+<ul>
+<li>usuario: kminchelle</li>
+<li>contraseña: 01elplR</li>
+</ul>
+<p> ----------- </p>
+<ul>
+<li>usuario: atuny0</li>
+<li>contraseña: 9uQFF1Lh</li>
+</ul>
+<p> ----------- </p>
+<ul>
+<li>usuario: jtreleven5</li>
+<li>contraseña: zY1nE46Zm</li>
+</ul>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p>Para acceder a la API de Dummyjson y su documentación puede entrar al siguiente <a href="https://dummyjson.com/docs/users">link</a>
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p>Para acceder a la API de Newsdata.io y su documentación puede entrar al siguiente <a href="https://newsdata.io/documentation">link</a>
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h4 class="text-lg">\\ Tecnologías utilizadas</h4>
 
-### `npm run eject`
+<div class="flex gap-x-2">
+<ul>
+<li>Javascript</li>
+<li>React JS</li>
+<li>Sass</li>
+<li>Git</li>
+</ul>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h4 class="text-lg">\\ Autor</h4>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p>Maximiliano Leonel Pérez</p>
+<a href="https://github.com/MaximilianoLeonel23" target="_blank">Github</a>
+<a href="https://www.linkedin.com/in/maximiliano-leonel-p%C3%A9rez-8846b826a/" target="_blank">Linkedin</a>
